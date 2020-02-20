@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".InfoActivity">
 
+    <TextView
+        android:id="@+id/acces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read C file"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="93dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="244dp"
+        android:text="Tap To Read"
+        android:textColor="@mipmap/ic_launcher"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
