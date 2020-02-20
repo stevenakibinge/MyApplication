@@ -7,5 +7,5 @@
         android:title="Settings" />
     <item
         android:id="@+id/network"
-        android:title="Music" />
+        android:title="Files" />
 </menu>
