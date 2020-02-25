@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(new Intent(this, UpdateActivity.class));
             return true;
+        case R.id.list:
+            startActivity(new Intent(this,ProductActivity.class));
+            return true;
+        case R.id.lecy:
+            startActivity(new Intent(this,RecycleActivity.class));
+            return true;
         default:
             /*return super.onOptionsItemSelected(item);*/
             return true;

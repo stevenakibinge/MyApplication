@@ -8,4 +8,11 @@
     <item
         android:id="@+id/network"
         android:title="Files" />
+    <item
+        android:id="@+id/list"
+        android:title="Products" />
+
+    <item android:title="Recycler"
+        android:id="@+id/lecy"/>
+
 </menu>
