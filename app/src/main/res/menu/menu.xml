@@ -14,5 +14,9 @@
 
     <item android:title="Recycler"
         android:id="@+id/lecy"/>
+    <item android:title="call"
+        android:id="@+id/c"/>
+    <item android:title="Mail"
+        android:id="@+id/m"/>
 
 </menu>
