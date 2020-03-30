@@ -3,6 +3,8 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.job.JobScheduler;
 import android.app.job.JobService;
 import android.content.BroadcastReceiver;
@@ -24,6 +26,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    Button btAlarm; // for alarm
+    EditText eAlarm;// for alarm
     // creating and instantiate a  Broadcast Reciever to recieve the message
   BroadcastReceiver obj = new BroadcastReceiver() {
       @Override
@@ -36,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
           // the message will be displayed in the text view we create earlier
           TextView textView= findViewById(R.id.t4);
           textView.setText("Batttery Level"+Integer.parseInt(String.valueOf(x))+"%");
-
-
       }
   };
          class receiver extends BroadcastReceiver{
@@ -48,17 +50,33 @@ public class MainActivity extends AppCompatActivity {
              }
          }
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btAlarm = (Button)findViewById(R.id.btnalarm);
+        eAlarm= (EditText)findViewById(R.id.editAlarm);
+        btAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int time = Integer.parseInt(eAlarm.getText().toString());
+                Intent geo = new Intent(getApplicationContext(),MyReceiver.class);
+                PendingIntent pi = PendingIntent.getBroadcast(getApplicationContext(),0,geo,0);
+                AlarmManager am= (AlarmManager)getSystemService(ALARM_SERVICE);
+                am.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+time*3000,pi);
+                // making a toast
+                Toast.makeText(getApplicationContext(),"Alarm is set in"+time+"secs",Toast.LENGTH_SHORT).show();
+
+           
+
+            }
+        });
+
         // registering a reciever for the battery using intent
         registerReceiver(obj,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         Button mus = (Button) findViewById(R.id.button);
+
         mus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

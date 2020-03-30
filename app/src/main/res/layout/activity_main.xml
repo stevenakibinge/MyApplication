@@ -26,7 +26,7 @@
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="193dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginBottom="268dp"
         android:ems="10"
         android:hint="Enter Message Here"
         android:inputType="textPersonName"
@@ -34,7 +34,7 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="@+id/textView2" />
 
     <Button
@@ -51,7 +51,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/message"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintVertical_bias="0.796" />
 
     <TextView
         android:id="@+id/textView"
@@ -73,7 +73,6 @@
         android:layout_marginBottom="536dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 
     <Button
@@ -103,6 +102,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnalarm"
+        android:layout_width="102dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#9C27B0"
+       android:onClick="sendMessage"
+
+        android:text="ALARM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:ems="10"
+        android:hint="Enter Alarm time"
+        android:textSize="22dp"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
