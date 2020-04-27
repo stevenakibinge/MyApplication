@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.Manifest;
 import android.app.AlarmManager;
@@ -55,8 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // creating tool bar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
         btAlarm = (Button)findViewById(R.id.btnalarm);
         eAlarm= (EditText)findViewById(R.id.editAlarm);
+
         btAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         message.setText("");
     }
-
+// creating the menu
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inf = getMenuInflater();
         inf.inflate(R.menu.menu, menu);
