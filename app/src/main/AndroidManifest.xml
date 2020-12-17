@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Services"></activity>
+        <activity android:name=".Foreground"></activity>
+        <activity android:name=".Services" />
         <activity android:name=".RecycleActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -28,7 +29,9 @@
         <activity android:name=".SocialActivity" />
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".MainActivity" />
-        <service android:name=".Myservice"/>
+
+        <service android:name=".Myservice" />
+        <service android:name=".ForegroundService" />
     </application>
 
 </manifest>

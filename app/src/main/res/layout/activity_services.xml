@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="50dp"
         android:background="@color/blue"
         android:text="Start Service"
         android:textSize="20dp" />
@@ -25,10 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="@android:dimen/app_icon_size"
         android:backgroundTintMode="screen"
-        android:text="Start Service"
+        android:text="Stop Service"
         android:textSize="20dp" />
 
 </LinearLayout>

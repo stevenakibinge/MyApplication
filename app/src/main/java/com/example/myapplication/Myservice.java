@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.provider.ContactsContract;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 public class Myservice extends Service {
-    private MediaPlayer player;
+
+    private MediaPlayer player;// for background music
+
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {

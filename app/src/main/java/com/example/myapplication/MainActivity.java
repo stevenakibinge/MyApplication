@@ -125,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
             case backg:
                 startActivity(new Intent(this,Services.class));
                 return true;
+            case R.id.foreground:
+                startActivity(new Intent(this,Foreground.class));
+                return true;
+
             case R.id.c:
                 Intent in = new Intent(Intent.ACTION_DIAL);
                 in.setData( Uri.parse("tel:0780784682"));
