@@ -128,6 +128,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.foreground:
                 startActivity(new Intent(this,Foreground.class));
                 return true;
+            case R.id.store:
+                startActivity(new Intent(this,Storage.class));
+                return true;
+            case R.id.ext:
+                startActivity(new Intent(this,ExternalStorage.class));
+                return true;
+
 
             case R.id.c:
                 Intent in = new Intent(Intent.ACTION_DIAL);
