@@ -18,5 +18,8 @@
         android:id="@+id/c"/>
     <item android:title="Mail"
         android:id="@+id/m"/>
+    <item
+        android:id="@+id/backg"
+        android:title="services" />
 
 </menu>

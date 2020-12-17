@@ -3,7 +3,6 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -13,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Services"></activity>
         <activity android:name=".RecycleActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -29,6 +28,7 @@
         <activity android:name=".SocialActivity" />
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".MainActivity" />
+        <service android:name=".Myservice"/>
     </application>
 
 </manifest>

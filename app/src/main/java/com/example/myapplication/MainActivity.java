@@ -3,19 +3,15 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.app.job.JobScheduler;
-import android.app.job.JobService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +21,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.example.myapplication.R.id.backg;
 
 public class MainActivity extends AppCompatActivity {
     Button btAlarm; // for alarm
@@ -108,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.setting:
@@ -122,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.lecy:
                 startActivity(new Intent(this, RecycleActivity.class));
+                return true;
+            case backg:
+                startActivity(new Intent(this,Services.class));
                 return true;
             case R.id.c:
                 Intent in = new Intent(Intent.ACTION_DIAL);
