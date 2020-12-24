@@ -134,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.ext:
                 startActivity(new Intent(this,ExternalStorage.class));
                 return true;
+            case R.id.content:
+                startActivity(new Intent(this,ContentProActivity.class));
+                return true;
 
 
             case R.id.c:

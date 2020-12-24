@@ -30,5 +30,8 @@
     <item
         android:id="@+id/ext"
         android:title="External Storage" />
+    <item
+        android:id="@+id/content"
+        android:title="Content provider" />
 
 </menu>

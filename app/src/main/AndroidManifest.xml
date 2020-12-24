@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Details"></activity>
+        <activity android:name=".ContentProActivity"></activity>
+        <activity android:name=".Details" />
         <activity android:name=".ExternalStorage" />
         <activity android:name=".Storage" />
         <activity android:name=".Foreground" />
@@ -34,9 +35,10 @@
         <activity android:name=".SocialActivity" />
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".MainActivity" />
-
         <service android:name=".Myservice" />
         <service android:name=".ForegroundService" />
+        <provider android:name=".StaffProvider"
+            android:authorities="com.example.MyApplication.StaffProvider"/>
     </application>
 
 </manifest>
