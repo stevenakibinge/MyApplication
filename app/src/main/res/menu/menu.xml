@@ -6,6 +6,9 @@
         android:id="@+id/sense"
         android:title="Sensor" />
     <item
+        android:id="@+id/asy"
+        android:title="Async" />
+    <item
         android:id="@+id/setting"
         android:title="Settings" />
     <item

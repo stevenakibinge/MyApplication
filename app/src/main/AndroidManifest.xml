@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
-    <uses-permission android:name="android.hardware.sensor.proximity"/> // permission to use proximity sensor
-    <uses-permission android:name="android.permission.CALL_PHONE" /> // permission to use the call service
+
+    <uses-permission android:name="android.hardware.sensor.proximity" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> // use permission to write files on external storage
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> //use permission to retrieve from  external storage
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContentProActivity"></activity>
+        <activity android:name=".AsynchActivity"></activity>
+        <activity android:name=".ContentProActivity" />
         <activity android:name=".Details" />
         <activity android:name=".ExternalStorage" />
         <activity android:name=".Storage" />
@@ -23,8 +25,8 @@
         <activity android:name=".RecycleActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" /> // intent filter for the broadcast reciever for the battery and progress bar
-
+                <action android:name="android.intent.action.MAIN" />
+                // intent filter for the broadcast reciever for the battery and progress bar
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,11 +37,13 @@
         <activity android:name=".SocialActivity" />
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".MainActivity" />
-        <service android:name=".Myservice" /> // registering the service in the application that will play backgroung music
-        <service android:name=".ForegroundService" /> // registering the foregroung service in the app
-        <provider android:name=".StaffProvider"
-            android:authorities="com.example.MyApplication.StaffProvider"/> // registering content provider and giving it authority
-        to write to the database and retrieve from it
+
+        <service android:name=".Myservice" />
+        <service android:name=".ForegroundService" />
+
+        <provider
+            android:name=".StaffProvider"
+            android:authorities="com.example.MyApplication.StaffProvider" />
     </application>
 
 </manifest>

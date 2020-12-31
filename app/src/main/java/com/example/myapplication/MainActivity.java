@@ -140,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sense:
                 startActivity(new Intent(this,SocialActivity.class));
                 return true;
+            case R.id.asy:
+                startActivity(new Intent(this,AsynchActivity.class));
+                return true;
+
 
 
             case R.id.c:
